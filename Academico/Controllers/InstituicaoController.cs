@@ -52,5 +52,9 @@ namespace Academico.Controllers
             instituicoes.Add(instituicao);
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(Instituicao instituicao)
+        {
+            instituicoes.Remove(instituicoes.Where(id => i.Id == instituicao.Id).First());
+        }
     }
 }
